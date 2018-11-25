@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>JSON Search Engine</title>
+  
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.css'>
+
+  
+  
+</head>
+
+<body>
+
+  <form>
+	<div class="row">
+		<div class="medium-6 columns">
+			<label>Search
+        <input id="searchText" type="text" placeholder="search">
+			</label>
+			<label>Search by:
+					<select id="searchField">
+						<option value="name">Name</option>
+						<option value="city">City</option>
+						<option value="city">WIP</option>
+					</select>
+			</label>
+			<div class="button-group">
+				<label>Sort by:</label>
+					<a class="button sort" data-filter="name">Name</a>
+					<a class="button sort" data-filter="city">City</a>
+			</div>
+		</div>
+	</div>
+	<!-- 	<div class="row">
+    <div class="medium-6 columns">
+      <button id="search" type="button" class="button expanded">Search</button>
+    </div>
+  </div> -->
+</form>
+<script id="results" type="text/x-handlebars-template">
+	{{#each this}}
+	<div class="row sort-item" data-name="{{name}}" data-city="{{city}}">
+		<div class="small-12 columns">
+			<h1>{{name}}</h1>
+			<h2>City: {{city}}</h2>
+			<hr />
+		</div>
+	</div>
+	{{/each}}
+</script>
+<div class="row">
+	<div id="output"></div>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
